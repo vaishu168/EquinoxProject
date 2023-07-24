@@ -8,4 +8,4 @@ pool:
 
 steps:
 - checkout: self  # This step checks out the code from the repository into the agent workspace
-  path: C:\Users\vaish\Documents\selfHosted\agent  # Replace 'C:\Path\To\Your\Folder' with the path to the folder where you want to clone the repository
+  path: C:\Windows\System32\agent\_work  # Replace 'C:\Path\To\Your\Folder' with the path to the folder where you want to clone the repository
