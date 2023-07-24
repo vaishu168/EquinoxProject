@@ -4,8 +4,12 @@ trigger:
       - master  # Replace 'master' with the branch you want to trigger the pipeline on
 
 pool:
-  name: Default  # Replace 'YourSelfHostedAgentPool' with the name of your agent pool
+  name: YourSelfHostedAgentPool  # Replace 'YourSelfHostedAgentPool' with the name of your agent pool
 
 steps:
 - checkout: self  # This step checks out the code from the repository into the agent workspace
-  path: C:\Windows\System32\agent\_work  # Replace 'C:\Path\To\Your\Folder' with the path to the folder where you want to clone the repository
+
+- script: |
+    mkdir C:\Users\vaish\Documents\selfHosted\test  # Replace 'C:\Users\vaish\Documents\selfHosted\test'
+    copy "$(Agent.BuildDirectory)\s\YourRepo\Source\Folder\*" C:\Users\vaish\Documents\selfHosted\test
+  displayName: 'Copy files to folder'
