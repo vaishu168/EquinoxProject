@@ -10,6 +10,6 @@ steps:
 - checkout: self  # This step checks out the code from the repository into the agent workspace
 
 - script: |
-    mkdir C:\Users\vaish\Documents\selfHosted\test  # Replace 'C:\Users\vaish\Documents\selfHosted\test'
-    copy "$(Agent.BuildDirectory)\s\YourRepo\Source\Folder\*" C:\Users\vaish\Documents\selfHosted\test
+    mkdir C:\Windows\System32\agent\temp1  # Replace 'C:\Windows\System32\agent\temp1'
+    copy "$(Agent.BuildDirectory)\s\YourRepo\Source\Folder\*" C:\Windows\System32\agent\temp1
   displayName: 'Copy files to folder'
