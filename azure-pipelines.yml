@@ -1,0 +1,11 @@
+trigger:
+  branches:
+    include:
+      - master  # Replace 'master' with the branch you want to trigger the pipeline on
+
+pool:
+  name: Default  # Replace 'YourSelfHostedAgentPool' with the name of your agent pool
+
+steps:
+- checkout: self  # This step checks out the code from the repository into the agent workspace
+  path: C:\Users\vaish\Documents\selfHosted\agent  # Replace 'C:\Path\To\Your\Folder' with the path to the folder where you want to clone the repository
